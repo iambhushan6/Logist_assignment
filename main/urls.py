@@ -14,4 +14,9 @@ urlpatterns = [
     path('registervehicle/', views.RegisterVehicleView.as_view()),
 
     # path('trip/', views.Centerlist.as_view()),
+
+    path('customers/', views.CustomersListView.as_view()),
+
+    path('vehicleowners/', views.VehicleOwnersListView.as_view()),
+
 ]
