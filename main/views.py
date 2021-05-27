@@ -35,3 +35,13 @@ class RegisterVehicleView(CreateView):
     template_name = 'main/registervehicle.html'
     fields = '__all__'
     success_url ='/'
+
+class CustomersListView(ListView):
+    model = models.BookVehicle
+    context_object_name = 'customers'
+    template_name = 'main/customers.html'
+
+class VehicleOwnersListView(ListView):
+    model = models.RegisterVehicle
+    context_object_name = 'trucks'
+    template_name = 'main/vehicleowners.html'
