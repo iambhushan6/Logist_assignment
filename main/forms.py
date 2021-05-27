@@ -11,14 +11,14 @@ class RegisterVehicleForm(forms.ModelForm):
 class BookVehicleForm(forms.ModelForm):
     
     class Meta:
-        widgets = {'datetime': widgets.DateTimeInput()}
+        widgets = {'datetime': widgets.DateInput()}
         model = models.BookVehicle
         fields = "__all__"
 
 class TripForm(forms.ModelForm):
     
     class Meta:
-        # widgets = {'datetime': widgets.DateTimeInput()}
+        widgets = {'datetime': widgets.DateTimeInput()}
         model = models.Trip
         fields = "__all__"
 
