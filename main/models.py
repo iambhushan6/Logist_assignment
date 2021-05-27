@@ -44,7 +44,7 @@ class Trip(models.Model):
     truck = models.ForeignKey('RegisterVehicle', on_delete=models.CASCADE)
 
     # def __str__(self):
-    #     return self.BookVehicle.name
+    #     return self.name or ' '
     
 
 

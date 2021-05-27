@@ -50,8 +50,8 @@
     <div class="container">
         <strong>
             <form action="" method="POST">
-                <div class="row">
-                    <div class="row">
+                <div class="row-50">
+                    <div class="row-50">
                         {% csrf_token %}
                         {{ form }}                    
                     </div>
@@ -60,6 +60,17 @@
                     <input type="submit" value="Submit">
                 </div>
             </form>
+
+            <br>
+            <form action="" method="POST">
+            {% comment %} {% for field in form %} {% endcomment %}
+
+            <label for="{{ field.datetime }}"> {{ field.datetime }} </label>
+            <input name="{{ field.datetime }}" class='block' id="{{ field.datetime }}" >
+
+            {% comment %} {% endfor %} {% endcomment %}
+
+        </form>
         </strong>
     </div>
 
